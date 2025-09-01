@@ -11,10 +11,11 @@ function priceInputChange() {
 
 let colorSelect = 1;
 let colorSelectColor = red;
+let colorSelectPrices = [1, 4, 1.2, 1.1, 1.3, 1.4];
 
 function colorSelectSelection() {
-    colorSelect = Number(document.getElementById("color").value);
-    colorSelectColor = document.querySelector(`option[value="${colorSelect}"]`).id;
+    colorSelect = colorSelectPrices[Number(document.getElementById("color").value)];
+    colorSelectColor = document.querySelector(`option[value="${Number(document.getElementById("color").value)}"]`).id;
     
     priceFinalChange();
 }
@@ -24,6 +25,7 @@ function colorSelectSelection() {
 // #region Select 2
 
 let secondSelector = 1;
+let secondSelectorPrices = [1, 2, 60];
 
 document.querySelectorAll(".btnSelector2").forEach((element) => {
     element.addEventListener("click", (e) => { btnSelector2Selection(e) })
@@ -40,7 +42,7 @@ function btnSelector2Selection(e) {
 
     e.target.classList.remove("btn-primary");
     e.target.classList.add("btn-info");
-    secondSelector = Number(e.target.id);
+    secondSelector = secondSelectorPrices[Number(e.target.id)];
 
     priceFinalChange();
 
@@ -72,7 +74,6 @@ function btnSelector3Selection(e) {
 // #endregion
 
 function priceFinalChange() {
-    console.log(colorSelectColor)
     document.getElementById("priceFinal").style.backgroundColor = colorSelectColor;
 
     priceFinal = priceInput * colorSelect * secondSelector * thirdSelector;
