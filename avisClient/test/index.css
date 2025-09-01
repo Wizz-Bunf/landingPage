@@ -1,0 +1,54 @@
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.formulaire button {
+    width: 80px;
+    margin: 15px;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.commentaire {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+}
+
+.commentaire textarea {
+    width: 500px;
+    height: 100px;
+}
+
+#commentForm {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    gap: 10px;
+    width: 500px;
+    align-items: center;
+    justify-self: center;
+
+}
+
+.commentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(204, 204, 204);
+    width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+}
