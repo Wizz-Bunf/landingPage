@@ -1,0 +1,71 @@
+body{
+    color: black;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.avis{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.baseAvis{
+    display: flex ;
+    flex-direction: row;
+    background-color: aliceblue;
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+.baseCartes{
+    display: flex;
+}
+
+.carte img {
+    width:30%;
+    border-radius: 100%;
+}
+    
+.profil{
+    display: flex;
+    align-items: center;
+}
+    
+
+/* étoiles */
+
+.star-rating {
+        direction: rtl;
+        display: flex;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        gap: 3px;
+    }
+
+    .star-rating input {
+        display: none;
+        flex-wrap: nowrap;
+        
+    }
+
+    .star-rating label {
+        color: #ddd;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        flex-wrap: nowrap;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover~label,
+    .star-rating input:checked~label {
+        color: #ffc107;
+        flex-wrap: nowrap;
+    }
+        
